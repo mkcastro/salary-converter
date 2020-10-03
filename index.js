@@ -3,6 +3,7 @@ function calculateMonthly() {
     const perDay = $("input[name=days]").val();
     const perWeek = $("input[name=weeks]").val();
     const perMonth = $("input[name=months]").val();
+    dump(perMonth);
     const currency = $("#currency").val();
     let monthlySalary = 0;
     const hoursPerDay = 8;
@@ -32,7 +33,7 @@ function calculateMonthly() {
     appendToHistory(monthlySalary);
 }
 
-function appendToHistory(currency, salary) {
+function appendToHistory(salary) {
     $(".history").append(`
         <tr>
             <td class="border px-4 py-2">${salary} php per month</td>
