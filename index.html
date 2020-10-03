@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-gray-500">
+        <div class="container">
+            <div class="flex flex-col">
+                <div class="mb-5">
+                    currency
+                    <select name="currency" id="currency">
+                        <option value="usd">usd</option>
+                        <option value="php">php</option>
+                    </select>
+                </div>
+                <div class="mb-5">
+                    hour
+                    <input type="text" name="hours" />
+                </div>
+                <div class="mb-5">
+                    day
+                    <input type="text" name="days" />
+                </div>
+                <div class="mb-5">
+                    week
+                    <input type="text" name="weeks" />
+                </div>
+                <div class="mb-5">
+                    month
+                    <input type="text" name="months" />
+                </div>
+                <button
+                    class="bg-blue-500 hovejr:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onclick="calculateMonthly()"
+                >
+                    Button
+                </button>
+                <div class="mb-5">
+                    <p class="output"></p>
+                </div>
+                <div class="mb-5">
+                    <table class="table-auto w-full">
+                        <thead>
+                            <tr>
+                                <th class="">Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="history">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+    </body>
+</html>
